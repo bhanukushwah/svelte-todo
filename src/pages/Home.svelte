@@ -2,7 +2,7 @@
 import { onMount } from "svelte";
 import PostForm from '../components/PostForm.svelte';
 
-const apiBaseUrl = 'http://todo-backend-express.herokuapp.com';
+const apiBaseUrl = 'https://todo-backend-express.herokuapp.com';
 
 let posts = [];
 
@@ -87,8 +87,8 @@ const addPost = ({detail}) => {
                         </p>
                     </div>
                     <div class="card-action">
-                        <a href="#" on:click={()=> editPost(post)}>Edit</a>
-                        <a href="#" class="delete-btn" on:click={()=> deletePost(post.url)}>Delete</a>
+                        <a on:click={()=> editPost(post)}>Edit</a>
+                        <a class="delete-btn" on:click={()=> deletePost(post.url)}>Delete</a>
                     </div>
                 </div>
             </div>

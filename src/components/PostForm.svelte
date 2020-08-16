@@ -12,7 +12,7 @@
     const dispatch = createEventDispatcher()
     export let editingPost
     $: title = editingPost.title;
-    const apiBaseUrl = 'http://todo-backend-express.herokuapp.com';
+    const apiBaseUrl = 'https://todo-backend-express.herokuapp.com';
 
     async function onSubmit(event) {
         event.preventDefault();
